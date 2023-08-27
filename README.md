@@ -9,9 +9,29 @@ Ultimately, we have utilized **Flask** and **Plotly** technologies to create an 
 
 ![Screenshot of Web App](https://github.com/Ting-DS/Disaster_Response_Classification_Pipeline/blob/main/Web_App.png)
 
+## Installation
+To ensure proper functionality, it is required to run this project using Python 3 along with the following libraries:
+
+- **numpy**
+- **pandas**
+- **sqlalchemy**
+- **re**
+- **NLTK**
+- **pickle**
+- **Sklearn**
+- **plotly**
+- **flask**
+
+Please ensure that you have these libraries installed before proceeding with the project setup.
+
+You can install these libraries using the following command:
+```bash
+pip install numpy pandas sqlalchemy nltk scikit-learn plotly flask
+```
+
 ## File Description
 ~~~~~~~
-        disaster_response_pipeline
+        Disaster_Response_Classification_Pipeline
           |-- app
                 |-- templates
                         |-- go.html
@@ -34,8 +54,6 @@ Ultimately, we have utilized **Flask** and **Plotly** technologies to create an 
                 |-- README
           |-- README
 ~~~~~~~
-## Installation
-Must runing with Python 3 with libraries of numpy, pandas, sqlalchemy, re, NLTK, pickle, Sklearn, plotly and flask libraries.
 
 ## File Descriptions
 1. App folder including the templates folder and "run.py" for the web application
