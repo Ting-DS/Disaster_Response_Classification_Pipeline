@@ -1,17 +1,18 @@
-import json
-import plotly
-import pandas as pd
+import json  # Used for handling JSON data.
+import plotly  # Library for interactive data visualizations.
+import pandas as pd  # Library for data analysis and manipulation.
 
-from nltk.stem import WordNetLemmatizer
-from nltk.tokenize import word_tokenize
+from nltk.stem import WordNetLemmatizer  # Used for word lemmatization.
+from nltk.tokenize import word_tokenize  # Used for text tokenization.
 
-from flask import Flask
-from flask import render_template, request, jsonify
-from plotly.graph_objs import Bar
-from joblib import dump, load
-import joblib
-from sqlalchemy import create_engine
+from flask import Flask  # Micro web framework for building web applications.
+from flask import render_template, request, jsonify  # Flask functions for web app development.
 
+from plotly.graph_objs import Bar  # Used for creating bar charts.
+from joblib import dump, load  # Library for efficient object saving/loading.
+import joblib  # Library for object saving/loading.
+
+from sqlalchemy import create_engine  # Library for database interaction.
 
 app = Flask(__name__)
 
