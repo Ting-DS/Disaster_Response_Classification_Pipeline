@@ -5,7 +5,7 @@ In this project, we will build a model to classify messages that are sent during
 
 Finally, this project contains a web app where you can input a message and get classification results.
 
-![Screenshot of Web App](https://github.com/Ting-DS/Disaster_Response_Classification_Pipeline/edit/main/README.md/Web_App.PNG)
+![Screenshot of Web App](https://github.com/Ting-DS/Disaster_Response_Classification_Pipeline/blob/main/Web_App.png)
 
 ## File Description
 ~~~~~~~
