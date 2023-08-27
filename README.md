@@ -1,9 +1,11 @@
 # Disaster Response Classification Pipeline
 
 ## Project Description
-In this project, we will build a model to classify messages that are sent during disasters. There are 36 pre-defined categories, and examples of these categories include Aid Related, Medical Help, Search And Rescue, etc. By classifying these messages, we can allow these messages to be sent to the appropriate disaster relief agency. This project will involve the building of a basic ETL and Machine Learning pipeline to facilitate the task. This is also a multi-label classification task, since a message can belong to one or more categories. We will be working with a data set provided by [Figure Eight](https://www.figure-eight.com/) containing real messages that were sent during disaster events.
+This project leverages a dataset provided by [Appen](https://www.appen.com/), containing tens of thousands of real messages from various sources during disaster events. We have constructed a powerful **multi-label classification machine learning (ML) model** aimed at efficiently categorizing messages sent during disasters. The dataset encompasses information across 36 predefined categories, including but not limited to aid-related, medical assistance, search and rescue, among others. By effectively categorizing these messages, we are able to swiftly relay them to the appropriate disaster relief organizations, thereby enhancing their information processing efficiency and enabling targeted and timely rescue efforts.
 
-Finally, this project contains a web app where you can input a message and get classification results.
+Within the project, we have established a comprehensive technical framework, encompassing **ETL** (Extract, Transform, Load), **NLP** (Natural Language Processing), and **ML pipelines**, all implemented using the **SQLite database** and **Python** programming language. Given that disaster-related information can fall into multiple categories, we are dealing with a multi-label classification task. This implies that a single message can belong to one or more categories simultaneously.
+
+Ultimately, we have utilized **Flask** and **Plotly** technologies to create an intuitive web application for showcasing the visualization of data. This application allows stakeholders to easily input information and instantly obtain classification results. Below is a screenshot of the web application, showcasing the user interface and visual representation of classification outcomes:
 
 ![Screenshot of Web App](https://github.com/Ting-DS/Disaster_Response_Classification_Pipeline/blob/main/Web_App.png)
 
