@@ -9,7 +9,7 @@ Ultimately, we have utilized **Flask** and **Plotly** technologies to create an 
 
 ![Screenshot1 of Web App](https://github.com/Ting-DS/Disaster_Response_Classification_Pipeline/blob/main/Web_App.png)
 
-![Screenshot2 of Web App](https://github.com/Ting-DS/Disaster_Response_Classification_Pipeline/blob/main/Distribution_Message.png)
+![Screenshot2 of Web App](https://github.com/Ting-DS/Disaster_Response_Classification_Pipeline/blob/main/Distribution_Message_Categories.png)
 
 ## Installation
 To ensure proper functionality, it is required to run this project using Python 3 along with the following libraries:
