@@ -8,7 +8,8 @@ from nltk.tokenize import word_tokenize
 from flask import Flask
 from flask import render_template, request, jsonify
 from plotly.graph_objs import Bar
-from sklearn.externals import joblib
+from joblib import dump, load
+import joblib
 from sqlalchemy import create_engine
 
 
@@ -48,13 +49,22 @@ def index():
     cate_counts = (categories.mean()*categories.shape[0]).sort_values(ascending=False)
     cate_names = list(cate_counts.index)
     
-    # Plotting of Categories Distribution in Direct Genre
-    direct_cate = df[df.genre == 'direct']
+    # Plotting of Categories Distribution in news Genre
+    news_cate = df[df.genre == 'news']
+    news_cate_counts = (news_cate.mean()*news_cate.shape[0]).sort_values(ascending=False)
+    news_cate_names = list(news_cate_counts.index)
+    
+    # Plotting of Categories Distribution in direct Genre
+    direct_cate = df[df.genre == 'news']
     direct_cate_counts = (direct_cate.mean()*direct_cate.shape[0]).sort_values(ascending=False)
     direct_cate_names = list(direct_cate_counts.index)
     
+    # Plotting of Categories Distribution in social Genre
+    social_cate = df[df.genre == 'news']
+    social_cate_counts = (social_cate.mean()*social_cate.shape[0]).sort_values(ascending=False)
+    social_cate_names = list(social_cate_counts.index)
+    
     # create visuals
-    # TODO: Below is an example - modify to create your own visuals
     graphs = [
         {
             'data': [
@@ -94,22 +104,58 @@ def index():
             }
             
         },
-        # Categories Distribution in Direct Genre (Visualization#3)
+        # Categories Distribution in news Genre (Visualization#3)
         {
             'data': [
                 Bar(
-                    x=direct_cate_names,
-                    y=direct_cate_counts
+                    x=direct_cate_names[1:],
+                    y=direct_cate_counts[1:]
                 )
             ],
 
             'layout': {
-                'title': 'Categories Distribution in Direct Genre',
+                'title': 'Categories Distribution in <b>Direct</b> Genre',
                 'yaxis': {
                     'title': "Count"
                 },
                 'xaxis': {
-                    'title': "Categories in Direct Genre"
+                    'title': "Categories in direct Genre"
+                }
+            }
+        },
+        {
+            'data': [
+                Bar(
+                    x=news_cate_names[1:],
+                    y=news_cate_counts[1:]
+                )
+            ],
+
+            'layout': {
+                'title': 'Categories Distribution in <b>News</b> Genre',
+                'yaxis': {
+                    'title': "Count"
+                },
+                'xaxis': {
+                    'title': "Categories in news Genre"
+                }
+            }
+        },
+        {
+            'data': [
+                Bar(
+                    x=social_cate_names[1:],
+                    y=social_cate_counts[1:]
+                )
+            ],
+
+            'layout': {
+                'title': 'Categories Distribution in <b>Social</b> Genre',
+                'yaxis': {
+                    'title': "Count"
+                },
+                'xaxis': {
+                    'title': "Categories in social Genre"
                 }
             }
         }
