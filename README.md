@@ -5,9 +5,11 @@ This project leverages a dataset provided by [Appen](https://www.appen.com/), co
 
 Within the project, we have established a comprehensive technical framework, encompassing **ETL** (Extract, Transform, Load), **NLP** (Natural Language Processing), and **ML pipelines**, all implemented using the **SQLite database** and **Python** programming language. Given that disaster-related information can fall into multiple categories, we are dealing with a multi-label classification task. This implies that a single message can belong to one or more categories simultaneously.
 
-Ultimately, we have utilized **Flask** and **Plotly** technologies to create an intuitive web application for showcasing the visualization of data. This application allows stakeholders to easily input information and instantly obtain classification results. Below is a screenshot of the web application, showcasing the user interface and visual representation of classification outcomes:
+Ultimately, we have utilized **Flask** and **Plotly** technologies to create an intuitive web application for showcasing the visualization of data. This application allows stakeholders to easily input information and instantly obtain classification results. Below is the screenshots of the web application, showcasing the user interface and visual representation of classification outcomes:
 
-![Screenshot of Web App](https://github.com/Ting-DS/Disaster_Response_Classification_Pipeline/blob/main/Web_App.png)
+![Screenshot1 of Web App](https://github.com/Ting-DS/Disaster_Response_Classification_Pipeline/blob/main/Web_App.png)
+
+![Screenshot2 of Web App](https://github.com/Ting-DS/Disaster_Response_Classification_Pipeline/blob/main/Distribution_Message.png)
 
 ## Installation
 To ensure proper functionality, it is required to run this project using Python 3 along with the following libraries:
@@ -91,9 +93,13 @@ To properly set up your database and model for this project, follow these steps 
    ```
    http://0.0.0.0:3001/
    ```
-   
-## Licensing, Authors, Acknowledgements
-Many thanks to Figure-8 for making this available to Udacity for training purposes. Special thanks to udacity for the training. Feel free to utilize the contents of this while citing me, udacity, and/or figure-8 accordingly.
+## Discussion (Imbalanced Problem)
+The provided dataset demonstrates class imbalance, with certain labels, such as "water," having relatively fewer instances. This imbalance can significantly impact model training, as the model might exhibit a bias towards majority classes, struggling to make accurate predictions for minority classes. To address this, techniques like **stratified sampling** during the train-test split have been applied to maintain class distribution.
 
-### NOTICE: Preparation folder is not necessary for this project to run.
-# Disaster_Response_Classification_Pipeline
+Given the nature of discerning disaster-related messages, striking a balance between precision and recall becomes imperative. Emphasizing **precision** holds value when aiming to minimize false positives and ensuring that predicted labels are correct. Conversely, prioritizing **recall** is pivotal when the objective is to minimize false negatives and correctly classify as many relevant instances as possible.
+
+Within the `train_classifier.py` script, options for parameter tuning have been integrated, affording the ability to tailor the model's behavior according to the problem's specifics. Experimenting with these parameters offers the opportunity to achieve a suitable trade-off between precision and recall for different categories, thereby enhancing the overall performance of the model.
+
+## Licensing, Authors, Acknowledgements
+I would like to extend my sincere gratitude to [Appen](https://www.appen.com/) for their contribution in making this valuable resource available to the public. A special acknowledgment goes to Udacity for their exceptional guidance throughout this project. Feel free to utilize the contents of this work, and when doing so, please remember to appropriately attribute the contributions of myself, Udacity, and/or Figure Eight."
+
