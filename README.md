@@ -98,7 +98,7 @@ The provided dataset demonstrates class imbalance, with certain labels, such as 
 
 Given the nature of discerning disaster-related messages, striking a balance between precision and recall becomes imperative. Emphasizing **precision** holds value when aiming to minimize false positives and ensuring that predicted labels are correct. Conversely, prioritizing **recall** is pivotal when the objective is to minimize false negatives and correctly classify as many relevant instances as possible.
 
-Within the `train_classifier.py` script, options for parameter tuning have been integrated, affording the ability to tailor the model's behavior according to the problem's specifics. Experimenting with these parameters offers the opportunity to achieve a suitable trade-off between precision and recall for different categories, thereby enhancing the overall performance of the model.
+Within the `train_classifier.py` script, options for parameter tuning have been integrated using **GridSearchCV**, affording the ability to tailor the model's behavior according to the problem's specifics. Experimenting with these parameters offers the opportunity to achieve a suitable trade-off between precision and recall for different categories, thereby enhancing the overall performance of the model.
 
 ## Licensing, Authors, Acknowledgements
 I would like to extend my sincere gratitude to [Appen](https://www.appen.com/) for their contribution in making this valuable resource available to the public. A special acknowledgment goes to Udacity for their exceptional guidance throughout this project. Feel free to utilize the contents of this work, and when doing so, please remember to appropriately attribute the contributions of myself, Udacity, and/or Figure Eight."
