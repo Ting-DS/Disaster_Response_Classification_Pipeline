@@ -1,6 +1,6 @@
 # Disaster Response Classification Pipeline
 
-## Project Motivation and Description
+## Introduction
 This project leverages a dataset provided by [Appen](https://www.appen.com/), containing tens of thousands of real messages from various sources during disaster events. We have constructed a powerful **multi-label classification machine learning (ML) model** aimed at efficiently categorizing messages sent during disasters. The dataset encompasses information across 36 predefined categories, including but not limited to aid-related, medical assistance, search and rescue, among others. By effectively categorizing these messages, we are able to swiftly relay them to the appropriate disaster relief organizations, thereby enhancing their information processing efficiency and enabling targeted and timely rescue efforts.
 
 Within the project, we have established a comprehensive technical framework, encompassing **ETL** (Extract, Transform, Load), **NLP** (Natural Language Processing), and **ML pipelines**, all implemented using the **SQLite database** and **Python** programming language. Given that disaster-related information can fall into multiple categories, we are dealing with a multi-label classification task. This implies that a single message can belong to one or more categories simultaneously.
